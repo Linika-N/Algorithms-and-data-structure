@@ -1,5 +1,7 @@
 package Practice_4;
 
+import java.util.Random;
+
 /*Необходимо превратить собранное на семинаре дерево поиска в полноценное левостороннее красно-черное дерево. 
 И реализовать в нем метод добавления новых элементов с балансировкой.
 
@@ -18,30 +20,13 @@ public class Main {
     public static void main(String[] args) {
         RedBlackTree<Integer> node = new RedBlackTree<Integer>();
 
-        node.insert(24);
-        node.inorder();
-        System.out.println("\n");
-        node.insert(5);
-        node.inorder();
-        System.out.println("\n");
-        node.insert(1);
-        node.inorder();
-        System.out.println("\n");
-        node.insert(15);
-        node.inorder();
-        System.out.println("\n");
-        node.insert(3);
-        node.inorder();
-        System.out.println("\n");
-        node.insert(8);
-        node.inorder();
-        System.out.println("\n");
-        node.insert(13);
-        node.inorder();
-        System.out.println("\n");
-        node.insert(16);
-        node.inorder();
-
+        Random rnd = new Random();
+        int x = rnd.nextInt(5,10);
+        for (int i = 0; i < x ; i++) {
+            node.insert(rnd.nextInt(-10,35));
+            node.inorder();
+            System.out.println("\n");
+        }
 
     }
 }
